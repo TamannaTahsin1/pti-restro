@@ -1,25 +1,46 @@
 import img from "../assets/img/Image2.png";
+import { FaGoogle, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const Footer = () => {
   return (
     <div>
       <div className="bg-orange-400 flex justify-between gap-2 p-10 items-center mt-20">
-        <div className="flex-1">
-          <div className="form-control">
+        <div className="space-y-6 lg:w-[800px] mx-auto">
+          {/* search */}
+          <div className="relative shadow rounded-md">
+            <span className="absolute inset-y-0 right-0 pl-3 flex items-center p-3 py-5">
+              <button className="lg:btn text-orange-500 font-semibold flex items-center justify-center gap-2 lg:bg-orange-600 lg:text-white px-6">
+                Subscribe <FaArrowRightLong />
+              </button>
+            </span>
             <input
               type="text"
               placeholder="Enter your email"
-              className="input input-bordered w-96"
+              className="input w-full h-[60px]"
             />
           </div>
-          <p className="text-5xl text-gray-100 ml-10 font-semibold">
-            Deliver Food To Your <br /> Door Step|
+          <p className="text-5xl text-black ml-10 font-semibold text-center lg:text-start">
+            pti<span className="font-bold text-orange-600">.</span>
           </p>
-          <p className="text-gray-100 ml-10 mt-6">
-            Authentic Food, Quick Service, Fast Delivery
-          </p>
+          <div className="flex justify-between items-center gap-10">
+            <p className="font-semibold text-black">
+              Copyright©Tripp.All Right Reserved
+            </p>
+            <div className="flex items-center justify-center gap-5">
+              <p className="bg-orange-600 text-white lg:bg-gray-200 rounded-full p-3 lg:text-orange-500">
+                <FaGoogle />
+              </p>
+              <p className="bg-orange-600 text-white lg:bg-gray-200 rounded-full p-3 lg:text-orange-500">
+                <FaTwitter />
+              </p>
+              <p className="bg-orange-600 text-white lg:bg-gray-200 rounded-full p-3 lg:text-orange-500">
+                <FaInstagram />
+              </p>
+            </div>
+          </div>
         </div>
-        <div className="flex-1">
+        <div className="">
           <img src={img} alt="" />
         </div>
       </div>
