@@ -23,19 +23,44 @@ const Recommended = () => {
               <div className="flex justify-between">
             <h1 className="text-xl font-semibold">Recommended</h1>
             <div  className="flex justify-center items-center">
-            <h1 className="btn bg-white shadow-none border-none text-orange-500">AddMore</h1>
+        
+                      {/* Open the modal using document.getElementById('ID').showModal() method */}
+<button className="btn  bg-white shadow-none border-none text-orange-500" onClick={()=>document.getElementById('my_modal_5').showModal()}>AddMore</button>
+<dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
+  <div className="modal-box">
+    <h3 className="font-bold text-lg">Hello!</h3>
+    <p className="py-4">Press ESC key or click the button below to close</p>
+    <div className="modal-action">
+      <form method="dialog">
+        {/* if there is a button in form, it will close the modal */}
+        <button className="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
             <div className="flex justify-center items-center text-md">
            <span className="text-gray-400"> <FaAngleLeft /> </span><FaAngleRight  className="text-gray-600"/>
             </div>
             </div>
             </div>
             <div className="flex">
-        <Swiper
-          slidesPerView={5}
+            <Swiper
+          slidesPerView={3}
           spaceBetween={12}
           freeMode={true}
           modules={[FreeMode, Pagination]}
           className="mySwiper"
+          breakpoints={{
+            640: {
+              slidesPerView: 3,
+            },
+            768: {
+              slidesPerView: 4,
+            },
+            1024: {
+              slidesPerView: 5,
+            },
+          }}
         >
           {recommended?.map((item) => (
             <SwiperSlide key={item.Id}>
@@ -45,7 +70,9 @@ const Recommended = () => {
                   className="lg:w-80 h-80 rounded-xl"
                   alt=""
                 />
-                <p className="text-center mb-3 font-semibold text-gray-400">{item.Name}</p>
+                <p className="text-center mb-3 font-semibold text-gray-400">
+                  {item.Name}
+                </p>
               </div>
             </SwiperSlide>
           ))}
