@@ -2,17 +2,17 @@ import img from "../../assets/img/Image1.png";
 const Banner = () => {
   return (
     <div>
-      <div className="bg-orange-300 lg:bg-orange-400  lg:flex justify-center gap-2 p-10 items-center my-20 rounded-2xl">
+      <div className=" lg:bg-orange-400  lg:flex justify-center gap-2 p-3 items-center lg:my-20 rounded-2xl">
         <div className="flex-1 ml-12">
-          <p className="text-5xl text-gray-100 font-semibold">
+          <p className="text-2xl lg:text-5xl text-black lg:text-white font-bold lg:font-semibold">
             Deliver Food To Your <br /> Door Step|
           </p>
-          <p className="text-slate-300 mt-6 ">
+          <p className="text-slate-300 mt-6 text-sm lg:text-xl">
             Authentic Food, Quick Service, Fast Delivery
           </p>
         </div>
-        <div className="flex-1">
-          <img src={img} alt="" />
+        <div className="flex-1 bg-orange-300 lg:bg-transparent rounded-3xl mt-20 mb-10 px-5">
+          <img src={img} className='-top-24' alt="" />
         </div>
       </div>
     </div>

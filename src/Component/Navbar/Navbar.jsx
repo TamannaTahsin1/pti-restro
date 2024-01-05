@@ -9,7 +9,7 @@ const Navbar = () => {
       
         <a className="btn btn-ghost text-3xl font-bold">pti.</a>
       </div>
-      <div className="navbar-center  lg:flex gap-3">
+      <div className="navbar-center lg:flex gap-2">
         {/* search */}
         <div className="relative shadow rounded-md">
           <span className="absolute inset-y-0 left-0 pl-3 flex items-center">
@@ -18,7 +18,7 @@ const Navbar = () => {
           <input
             type="text"
             placeholder="    Search Audiobook"
-            className="input w-48 lg:w-96"
+            className="input w-44 lg:w-96"
           />
         </div>
         <div className="dropdown max-w-lg">
