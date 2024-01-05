@@ -19,6 +19,7 @@ const Popular = () => {
   const onSubmit = (data) => {
     console.log(data)
   }
+  // ! data fetching
   const [popular, setPopular] = useState();
 
   useEffect(() => {
@@ -102,9 +103,9 @@ const Popular = () => {
                                         </label>
                                         <select defaultValue="default" {...register('Category', { required: true })}
                                             className="select select-bordered w-full">                                         
-                                            <option disabled value="true ">Select</option>
-                                            <option value="true">IsPopular</option>
-                                            <option value="false">IsRecommended</option>
+                                            <option disabled value="default">Select</option>
+                                            <option value="IsPopular">IsPopular</option>
+                                            <option value="IsRecommended">IsRecommended</option>
                                         </select>
                                     </div>
               <div className="form-control mt-6">
