@@ -55,6 +55,7 @@ const Navbar = () => {
         <a className="btn btn-ghost text-3xl font-bold">pti.</a>
       </div>
       <div className="navbar-center hidden lg:flex gap-3">
+        {/* search */}
         <div className="relative shadow rounded-md">
           <span className="absolute inset-y-0 left-0 pl-3 flex items-center">
             <FaSearch className="text-orange-400" />

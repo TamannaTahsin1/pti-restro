@@ -9,8 +9,8 @@ const Popular = () => {
         fetch('data.json')
         .then(res => res.json())
         .then(data => {
-            console.log(data);
-            setPopular(data)
+            console.log(data.Items);
+            setPopular(data.Items)
         })
     },[])
     return (

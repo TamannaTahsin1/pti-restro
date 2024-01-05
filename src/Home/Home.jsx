@@ -11,10 +11,11 @@ const Home = () => {
         <div className="container mx-auto">
             <Navbar></Navbar>
             <Banner></Banner>
-            {/* <Popular></Popular> */}
+            <Popular></Popular>
             <Recommended></Recommended>
         </div>
             <Footer></Footer>
+            
         </div>
     );
 };
