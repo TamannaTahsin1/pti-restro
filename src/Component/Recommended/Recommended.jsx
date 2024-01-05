@@ -65,9 +65,9 @@ const Recommended = () => {
           {recommended?.map((item) => (
             <SwiperSlide key={item.Id}>
               <div className="">
-                <img
+              <img
                   src={item.ImageUrl}
-                  className="lg:w-80 h-80 rounded-xl"
+                  className="w-40 h-56 lg:w-80 lg:h-80 rounded-xl"
                   alt=""
                 />
                 <p className="text-center mb-3 font-semibold text-gray-400">

@@ -1,4 +1,6 @@
-import { IoPersonCircleOutline } from "react-icons/io5";
+import { GoPerson } from "react-icons/go";
+
+
 import { FaSearch } from "react-icons/fa";
 import { FaAngleDown } from "react-icons/fa6";
 
@@ -58,7 +60,9 @@ const Navbar = () => {
         </div>
       </div>
       <div className="navbar-end hidden lg:flex">
-        <IoPersonCircleOutline className="text-3xl text-orange-500" />
+      <p className="bg-orange-600 rounded-full p-3 text-white text-xl font-bold">
+      <GoPerson />
+              </p>
       </div>
     </div>
   );
