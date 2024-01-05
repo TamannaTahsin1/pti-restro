@@ -55,12 +55,16 @@ const Navbar = () => {
         <a className="btn btn-ghost text-3xl font-bold">pti.</a>
       </div>
       <div className="navbar-center hidden lg:flex gap-3">
-      <div className="relative shadow rounded-md">
-                    <span className="absolute inset-y-0 left-0 pl-3 flex items-center">
-                        <FaSearch className="text-orange-400" />
-                    </span>
-                    <input type="text" placeholder="     Search Audiobook" className="input w-96" />
-                </div>
+        <div className="relative shadow rounded-md">
+          <span className="absolute inset-y-0 left-0 pl-3 flex items-center">
+            <FaSearch className="text-orange-400" />
+          </span>
+          <input
+            type="text"
+            placeholder="     Search Audiobook"
+            className="input w-96"
+          />
+        </div>
         <div className="dropdown max-w-lg">
           <div
             tabIndex={0}
