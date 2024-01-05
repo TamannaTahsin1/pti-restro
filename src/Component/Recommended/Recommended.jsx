@@ -1,7 +1,7 @@
 import { FaAngleLeft, FaAngleRight  } from "react-icons/fa6";
 const Recommended = () => {
     return (
-        <div>
+        <div className="mb-20 p-5">
               <div className="flex justify-between">
             <h1 className="text-xl font-semibold">Recommended</h1>
             <div  className="flex justify-center items-center">
