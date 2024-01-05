@@ -6,8 +6,19 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
+import { useForm } from "react-hook-form";
 
 const Popular = () => {
+  // ! form
+  const {
+    register,
+    handleSubmit,
+    formState: { errors }
+  } = useForm();
+
+  const onSubmit = (data) => {
+    console.log(data)
+  }
   const [popular, setPopular] = useState();
 
   useEffect(() => {
@@ -28,27 +39,81 @@ const Popular = () => {
           {/* Open the modal using document.getElementById('ID').showModal() method */}
           <button
             className="btn  bg-white shadow-none border-none text-orange-500"
-            onClick={() => document.getElementById("my_modal_5").showModal()}
+            onClick={() => document.getElementById("my_modal_3").showModal()}
           >
             AddMore
           </button>
-          <dialog
-            id="my_modal_5"
-            className="modal modal-bottom sm:modal-middle"
-          >
+          <dialog id="my_modal_3" className="modal">
             <div className="modal-box">
-              <h3 className="font-bold text-lg">Hello!</h3>
-              <p className="py-4">
-                Press ESC key or click the button below to close
-              </p>
-              <div className="modal-action">
-                <form method="dialog">
-                  {/* if there is a button in form, it will close the modal */}
-                  <button className="btn">Close</button>
-                </form>
+              <form method="dialog">
+                {/* if there is a button in form, it will close the modal */}
+                <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+                  ✕
+                </button>
+              </form>
+              <h3 className="font-bold text-lg text-center">Add More Items</h3>
+              <form onSubmit={handleSubmit(onSubmit)} className="card-body">
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Name</span>
+                </label>
+                <input
+                  type="text"
+                  {...register('Name', { required: true })}
+                  name="Name"
+                  placeholder="food name"
+                  className="input input-bordered"
+                
+                />
+                {errors.Name && <span className="text-red-500 mt-2">Name is required!</span>}
+
               </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Image</span>
+                </label>
+                <input
+                  type="text"
+                  {...register('Image', { required: true })}
+                  name="image"
+                  placeholder="image url"
+                  className="input input-bordered"
+                
+                />
+                 {errors.Image && <span className="text-red-500 mt-2">Image is required!</span>}
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Price</span>
+                </label>
+                <input
+                  type="text"
+                  {...register('Price', { required: true })}
+                  name="Price"
+                  placeholder="$0.00"
+                  className="input input-bordered"
+             
+                />
+                 {errors.Price && <span className="text-red-500 mt-2">Price is required!</span>}
+              </div>
+              <div className="form-control w-full my-2">
+                                        <label className="label">
+                                            <span className="label-text">Category</span>
+                                        </label>
+                                        <select defaultValue="default" {...register('Category', { required: true })}
+                                            className="select select-bordered w-full">                                         
+                                            <option disabled value="true ">Select</option>
+                                            <option value="true">IsPopular</option>
+                                            <option value="false">IsRecommended</option>
+                                        </select>
+                                    </div>
+              <div className="form-control mt-6">
+                <button className="btn bg-orange-400 text-white">Add Item</button>
+              </div>
+            </form>
             </div>
           </dialog>
+          {/* slider arrow */}
           <div className="flex justify-center items-center text-md">
             <span className="text-gray-400">
               <FaAngleLeft />
