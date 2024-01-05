@@ -19,7 +19,7 @@ const Recommended = () => {
         });
     }, []);
     return (
-        <div className="mb-20 p-5">
+        <div className="mb-40 p-5">
               <div className="flex justify-between">
             <h1 className="text-xl font-semibold">Recommended</h1>
             <div  className="flex justify-center items-center">

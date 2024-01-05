@@ -5,7 +5,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 const Footer = () => {
   return (
     <div>
-      <div className="bg-orange-400 flex justify-between gap-2 p-10 items-center mt-20">
+      <div className="bg-orange-400 flex justify-between gap-2 p-10 items-center mt-30">
         <div className="space-y-6 lg:w-[800px] mx-auto">
           {/* search */}
           <div className="relative shadow rounded-md">
@@ -16,15 +16,15 @@ const Footer = () => {
             </span>
             <input
               type="text"
-              placeholder="Enter your email"
+              placeholder="Enter your email         "
               className="input w-full h-[60px]"
             />
           </div>
-          <p className="text-5xl text-black ml-10 font-semibold text-center lg:text-start">
+          <p className="text-5xl text-black font-semibold text-center lg:text-start">
             pti<span className="font-bold text-orange-600">.</span>
           </p>
-          <div className="flex justify-between items-center gap-10">
-            <p className="font-semibold text-black">
+          <div className="block lg:flex justify-between items-center gap-10">
+            <p className="font-semibold text-black text-center lg:text-start">
               Copyright©Tripp.All Right Reserved
             </p>
             <div className="flex items-center justify-center gap-5">
@@ -40,7 +40,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="">
+        <div className="hidden lg:flex lg:mr-20">
           <img src={img} alt="" />
         </div>
       </div>
