@@ -1,8 +1,10 @@
+import Navbar from "../Component/Navbar/Navbar";
 
 const Home = () => {
     return (
-        <div>
-            
+        <div className="container mx-auto">
+            <Navbar></Navbar>
+    
         </div>
     );
 };
