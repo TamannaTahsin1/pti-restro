@@ -1,5 +1,23 @@
 import { FaAngleLeft, FaAngleRight  } from "react-icons/fa6";
+import { FreeMode, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
+import { useEffect, useState } from "react";
 const Recommended = () => {
+    const [recommended, setRecommended] = useState();
+
+    useEffect(() => {
+      fetch("data.json")
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data.Items);
+          const recommended = data.Items;
+          const popularItems = recommended.filter((item) => item.IsRecommended === true);
+          setRecommended(popularItems);
+        });
+    }, []);
     return (
         <div className="mb-20 p-5">
               <div className="flex justify-between">
@@ -11,6 +29,28 @@ const Recommended = () => {
             </div>
             </div>
             </div>
+            <div className="flex">
+        <Swiper
+          slidesPerView={5}
+          spaceBetween={12}
+          freeMode={true}
+          modules={[FreeMode, Pagination]}
+          className="mySwiper"
+        >
+          {recommended?.map((item) => (
+            <SwiperSlide key={item.Id}>
+              <div className="">
+                <img
+                  src={item.ImageUrl}
+                  className="lg:w-80 h-80 rounded-xl"
+                  alt=""
+                />
+                <p className="text-center mb-3 font-semibold text-gray-400">{item.Name}</p>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
         </div>
     );
 };
