@@ -11,8 +11,8 @@ const Banner = () => {
             Authentic Food, Quick Service, Fast Delivery
           </p>
         </div>
-        <div className="flex-1 bg-orange-300 lg:bg-transparent rounded-3xl mt-20 mb-10 px-5">
-          <img src={img} className='relative -top-16 lg:-top-0' alt="" />
+        <div className="flex-1 h-44 lg:h-full bg-orange-300 lg:bg-transparent rounded-3xl mt-20 mb-10 px-5">
+          <img src={img} className='relative -top-14 lg:-top-0' alt="" />
         </div>
       </div>
     </div>
