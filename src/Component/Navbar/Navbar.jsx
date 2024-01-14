@@ -4,7 +4,7 @@ import { FaAngleDown } from "react-icons/fa6";
 
 const Navbar = () => {
   return (
-    <div className="navbar">
+    <div className="navbar overflow-hidden">
     <div className="navbar-start">
       <a className="btn btn-ghost text-3xl font-bold">pti.</a>
     </div>
